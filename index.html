@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Areesha Naeem | Data Analyst Portfolio</title>
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <link rel="icon" href="images/me.jpeg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+
+    <!-- BACKGROUND BLOBS -->
+    <div class="blob-container">
+        <div class="blob blob-violet"></div>
+        <div class="blob blob-cyan"></div>
+        <div class="blob blob-teal"></div>
+    </div>
+    
+    <!-- BACKGROUND GRID OVERLAY -->
+    <div class="grid-overlay"></div>
+
+    <!-- SCROLL PROGRESS INDICATOR -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress" id="scrollProgress"></div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="navbar-container">
+        <nav class="glass-nav">
+            <a href="#" class="logo-text">
+                <span class="logo-firstName">Areesha</span><span class="logo-lastName">Naeem</span>
+            </a>
+            
+            <!-- Mobile Menu Toggle Button -->
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <div class="nav-links" id="navMenu">
+                <a href="#about"><i class="fas fa-user-circle"></i> About</a>
+                <a href="#whyme"><i class="fas fa-question-circle"></i> Why Me</a>
+                <a href="#timeline"><i class="fas fa-briefcase"></i> Experience & Edu</a>
+                <a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a>
+                <a href="#skills"><i class="fas fa-laptop-code"></i> Skills</a>
+                <a href="#certifications"><i class="fas fa-certificate"></i> Certifications</a>
+                <a href="#contact" class="btn-connect"><i class="fas fa-paper-plane"></i> Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="home">
+        <div class="hero-content">
+            <div class="hero-text scroll-reveal" data-origin="left">
+                <span class="hero-tagline"><i class="fas fa-chart-bar"></i> Transforming Data into Decisions</span>
+                <h1 class="hero-title">
+                    Hi, I'm <span class="gradient-text">Areesha Naeem</span>
+                </h1>
+                <div class="typing-container">
+                    <span class="typing-prefix">A passionate </span>
+                    <span id="typing" class="typing-text-span"></span>
+                </div>
+                <p class="hero-subtitle">
+                    Specializing in custom Power BI dashboards, complex SQL analytics, and Python EDA to deliver clear, beautiful, and actionable insights.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn-primary"><i class="fas fa-eye"></i> View Dashboards</a>
+                    <a href="#contact" class="btn-secondary"><i class="fas fa-envelope"></i> Let's Collaborate</a>
+                </div>
+            </div>
+            
+            <div class="hero-visual scroll-reveal" data-origin="right">
+                <div class="avatar-glass-card tilt-card">
+                    <div class="avatar-wrapper">
+                        <img src="images/me.jpeg" alt="Areesha Naeem Profile" class="hero-avatar">
+                        <div class="glow-ring"></div>
+                    </div>
+                    <!-- Mini technology tags floating -->
+                    <div class="floating-tech tech-powerbi" title="Power BI Dashboard Master">
+                        <i class="fab fa-microsoft"></i> <span>Power BI</span>
+                    </div>
+                    <div class="floating-tech tech-sql" title="SQL Query Specialist">
+                        <i class="fas fa-database"></i> <span>SQL</span>
+                    </div>
+                    <div class="floating-tech tech-python" title="Python Data Modeler">
+                        <i class="fab fa-python"></i> <span>Python</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section scroll-reveal" data-origin="bottom">
+        <div class="section-container">
+            <h2 class="section-title"><span class="number-tag">01.</span> About Me</h2>
+            <div class="glass-card about-card">
+                <div class="about-inner">
+                    <div class="about-description">
+                        <p class="highlight-text">
+                            I specialize in turning messy, unorganized raw data into clear, impactful visual stories and actionable business strategies.
+                        </p>
+                        <p>
+                            With a strong foundation in computer science and advanced analytical tools, I bridge the gap between complex tech and smart business decisions. I design and build highly interactive Power BI and Excel dashboards, run complex database queries, and code high-performance exploratory analyses to uncover core trends and KPIs.
+                        </p>
+                        
+                        <div class="expertise-grid">
+                            <div class="exp-item">
+                                <div class="exp-icon"><i class="fas fa-database"></i></div>
+                                <div>
+                                    <h4>Databases & Querying</h4>
+                                    <p>MySQL, PostgreSQL, query tuning, structure optimization.</p>
+                                </div>
+                            </div>
+                            <div class="exp-item">
+                                <div class="exp-icon"><i class="fab fa-python"></i></div>
+                                <div>
+                                    <h4>Data Programming</h4>
+                                    <p>Python (Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn).</p>
+                                </div>
+                            </div>
+                            <div class="exp-item">
+                                <div class="exp-icon"><i class="fas fa-chart-line"></i></div>
+                                <div>
+                                    <h4>Advanced Visualization</h4>
+                                    <p>Power BI dashboards, Tableau stories, complex DAX scripting, Power Query.</p>
+                                </div>
+                            </div>
+                            <div class="exp-item">
+                                <div class="exp-icon"><i class="fas fa-tools"></i></div>
+                                <div>
+                                    <h4>Data Modeling & ETL</h4>
+                                    <p>Pivot Tables, complex spreadsheets, data cleaning, pipeline engineering.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY HIRE ME SECTION -->
+    <section id="whyme" class="whyme-section scroll-reveal" data-origin="bottom">
+        <div class="section-container">
+            <h2 class="section-title text-center"><span class="number-tag">02.</span> Why Hire Me?</h2>
+            <div class="hire-grid">
+                <div class="glass-card hire-card tilt-card">
+                    <div class="hire-icon"><i class="fas fa-tachometer-alt"></i></div>
+                    <h3>Dashboard Expertise</h3>
+                    <p>Production of high-speed, intuitive Power BI & Excel dashboards designed to answer critical operational questions at a glance.</p>
+                </div>
+                <div class="glass-card hire-card tilt-card">
+                    <div class="hire-icon"><i class="fas fa-brain"></i></div>
+                    <h3>SQL + Python Mastery</h3>
+                    <p>Clean SQL scripting for robust data extract operations, coupled with Python pipelines for deeper scientific modeling and EDA.</p>
+                </div>
+                <div class="glass-card hire-card tilt-card">
+                    <div class="hire-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Real Internship Experience</h3>
+                    <p>Proven track record of success working within PAC Kamra, building critical corporate dashboards and streamlining workflows.</p>
+                </div>
+                <div class="glass-card hire-card tilt-card">
+                    <div class="hire-icon"><i class="fas fa-chart-pie"></i></div>
+                    <h3>Business Centric Insights</h3>
+                    <p>Designing analytical tools not just for stats, but to actively increase profitability, discover opportunities, and manage risks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION & EXPERIENCE TIMELINE SECTION -->
+    <section id="timeline" class="timeline-section scroll-reveal" data-origin="bottom">
+        <div class="section-container">
+            <h2 class="section-title text-center"><span class="number-tag">03.</span> Education & Experience</h2>
+            
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                
+                <!-- TIMELINE ITEM: EXPERIENCE -->
+                <div class="timeline-item timeline-left">
+                    <div class="timeline-dot"><i class="fas fa-briefcase"></i></div>
+                    <div class="glass-card timeline-card tilt-card">
+                        <div class="time-header">
+                            <span class="time-badge">June 2025 - August 2025</span>
+                            <h3>Computer Science Intern</h3>
+                            <span class="company-name">Pakistan Aeronautical Complex (PAC) Kamra</span>
+                        </div>
+                        <div class="time-body">
+                            <ul class="timeline-bullets">
+                                <li><i class="fas fa-check-circle"></i> Extracted, cleaned, and analyzed massive production and operational flight datasets.</li>
+                                <li><i class="fas fa-check-circle"></i> Programmed lightweight Python script automation to compile and dispatch daily reports.</li>
+                                <li><i class="fas fa-check-circle"></i> Formulated executive-level Power BI dashboards to track aircraft reliability and operational KPIs.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TIMELINE ITEM: EDUCATION -->
+                <div class="timeline-item timeline-right">
+                    <div class="timeline-dot"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="glass-card timeline-card tilt-card">
+                        <div class="time-header">
+                            <span class="time-badge">2022 - 2026</span>
+                            <h3>BS Computer Science</h3>
+                            <span class="company-name">COMSATS University, Attock Campus</span>
+                        </div>
+                        <div class="time-body">
+                            <p class="timeline-highlight">
+                                <i class="fas fa-award"></i> Ranked within the <strong>top 5%</strong> of the graduating batch.
+                            </p>
+                            <p>
+                                Extensive training in database management systems (DBMS), software engineering, statistics, artificial intelligence, and analytical data visualization.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="projects-section scroll-reveal" data-origin="bottom">
+        <div class="section-container">
+            <h2 class="section-title"><span class="number-tag">04.</span> Projects & Dashboards</h2>
+            
+            <!-- Filters -->
+            <div class="filter-wrapper">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="powerbi">Power BI</button>
+                <button class="filter-btn" data-filter="sql">SQL Data Analysis</button>
+                <button class="filter-btn" data-filter="python">Python / EDA</button>
+            </div>
+
+            <!-- Project Grid -->
+            <div class="project-grid">
+                
+                <!-- 1 E-commerce -->
+                <div class="project-card glass-card tilt-card" data-category="powerbi sql" 
+                     onclick="openModal(
+                        'E-commerce Dashboard',
+                        'This comprehensive E-commerce dashboard provides rich insights into total sales, profitability curves, customer order behaviors, and regional product sales. Built by ingestion from backend SQL schemas, optimized through DAX, and delivered as an interactive diagnostic tool, it enables stakeholders to track growth metrics and forecast future product performance.',
+                        'Power BI, SQL, DAX, Excel',
+                        'https://github.com/areesha797/Analyzed-E-commerce-Sales-Data'
+                     )">
+                    <div class="project-img-container">
+                        <img src="images/e-commerce.png" alt="E-commerce Dashboard Preview" loading="lazy">
+                        <div class="project-overlay">
+                            <span class="btn-view-project"><i class="fas fa-search-plus"></i> View Case Study</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-badge">Power BI + SQL</span>
+                        <h3>E-commerce Sales Dashboard</h3>
+                        <p>End-to-end sales analysis revealing profit margins and seasonal customer behaviors.</p>
+                        <div class="project-tech-icons">
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">DAX</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2 HR Analytics -->
+                <div class="project-card glass-card tilt-card" data-category="powerbi sql" 
+                     onclick="openModal(
+                        'HR Analytics Dashboard',
+                        'An interactive HR diagnostic tool mapping operational employee metrics. It provides real-time tracking of retention curves, demographic distribution, attrition factors, salary spreads, and individual department performances, empowering executives to make objective HR decisions.',
+                        'Power BI, SQL, Excel',
+                        'https://github.com/areesha797/HR-Analytics-Dashboard'
+                     )">
+                    <div class="project-img-container">
+                        <img src="images/HR 01.png" alt="HR Analytics Dashboard Preview" loading="lazy">
+                        <div class="project-overlay">
+                            <span class="btn-view-project"><i class="fas fa-search-plus"></i> View Case Study</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-badge">Power BI + SQL</span>
+                        <h3>HR Analytics Dashboard</h3>
+                        <p>Employee churn, attrition rate analysis, and department salary distributions.</p>
+                        <div class="project-tech-icons">
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">Power Query</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3 Music Store SQL -->
+                <div class="project-card glass-card tilt-card" data-category="sql" 
+                     onclick="openModal(
+                        'Music Store SQL Analysis',
+                        'A comprehensive business database investigation using highly advanced SQL scripts to isolate top revenue patterns, customer lifetime value (CLV), transactional trends, and geographical revenue hotspots for a digital music store.',
+                        'SQL, PostgreSQL, Data Wrangling',
+                        'https://github.com/areesha797/music-store-data-analysis-sql'
+                     )">
+                    <div class="project-img-container">
+                        <img src="images/music.jpg" alt="SQL Data Analysis Preview" loading="lazy">
+                        <div class="project-overlay">
+                            <span class="btn-view-project"><i class="fas fa-search-plus"></i> View Case Study</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-badge">SQL Querying</span>
+                        <h3>SQL Music Store Analysis</h3>
+                        <p>Deep database queries mapping retail growth, customer spending, and invoice insights.</p>
+                        <div class="project-tech-icons">
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">Data Cleaning</span>
+                            <span class="tech-tag">Aggregations</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4 Python EDA -->
+                <div class="project-card glass-card tilt-card" data-category="python" 
+                     onclick="openModal(
+                        'Python Data Analysis (EDA)',
+                        'Exploratory Data Analysis pipelines in Jupyter environments, focusing on deep statistical distribution tracking, anomaly cleaning, feature correlations, and gorgeous diagnostic plotting using Pandas, Seaborn, and Matplotlib.',
+                        'Python, Pandas, NumPy, Matplotlib, Seaborn',
+                        'https://github.com/areesha797/Python-Data-Analysis-Project-EDA'
+                     )">
+                    <div class="project-img-container">
+                        <img src="images/py.jpg" alt="Python EDA Preview" loading="lazy">
+                        <div class="project-overlay">
+                            <span class="btn-view-project"><i class="fas fa-search-plus"></i> View Case Study</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-badge">Python EDA</span>
+                        <h3>Python Data Analysis</h3>
+                        <p>Complete statistical data cleaning, distribution mapping, and trend analysis.</p>
+                        <div class="project-tech-icons">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Seaborn</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5 Super Store -->
+                <div class="project-card glass-card tilt-card" data-category="powerbi" 
+                     onclick="openModal(
+                        'Super Store Sales Dashboard',
+                        'A high-fidelity sales operations dashboard leveraging DAX algorithms to forecast trends, map operational product categories, audit supplier performance, and represent key regional margins with drill-down interactions.',
+                        'Power BI, DAX, Power Query, Excel',
+                        'https://github.com/areesha797/Power-BI-Sales-Dashboard'
+                     )">
+                    <div class="project-img-container">
+                        <img src="images/Sales 01.png" alt="Super Store Dashboard Preview" loading="lazy">
+                        <div class="project-overlay">
+                            <span class="btn-view-project"><i class="fas fa-search-plus"></i> View Case Study</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-badge">Power BI Operations</span>
+                        <h3>Super Store Sales Dashboard</h3>
+                        <p>Forecasting-enabled dashboard with drill-down views of supply margins and profit.</p>
+                        <div class="project-tech-icons">
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">Forecasting</span>
+                            <span class="tech-tag">Excel</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6 HR Dashboard -->
+                <div class="project-card glass-card tilt-card" data-category="powerbi" 
+                     onclick="openModal(
+                        'HR Dashboard',
+                        'Frosted, easy-to-use executive tracking dashboard built in Power BI to monitor employee statuses, hiring cohorts, active metrics, and internal job roles.',
+                        'Power BI, Power Query, Data Modeling',
+                        'https://github.com/areesha797/HR-Dashboard'
+                     )">
+                    <div class="project-img-container">
+                        <img src="images/HR a.png" alt="HR Dashboard Preview" loading="lazy">
+                        <div class="project-overlay">
+                            <span class="btn-view-project"><i class="fas fa-search-plus"></i> View Case Study</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-badge">Power BI</span>
+                        <h3>HR Operational Dashboard</h3>
+                        <p>Sleek monitoring dashboard outlining active personnel dynamics and tracking role changes.</p>
+                        <div class="project-tech-icons">
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">ETL</span>
+                            <span class="tech-tag">Excel</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7 Supply Chain -->
+                <div class="project-card glass-card tilt-card" data-category="powerbi" 
+                     onclick="openModal(
+                        'Supply Chain Dashboard',
+                        'A supply chain dashboard tracking inventory levels, vendor performance scores, shipping delays, and logistics cost optimization paths for high-volume retail environments.',
+                        'Power BI, Supply Chain Logistics, Excel',
+                        'https://github.com/areesha797/Supply-Chain-Logistics-Dashboard'
+                     )">
+                    <div class="project-img-container">
+                        <img src="images/suuply chain.png" alt="Supply Chain Preview" loading="lazy">
+                        <div class="project-overlay">
+                            <span class="btn-view-project"><i class="fas fa-search-plus"></i> View Case Study</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-badge">Supply Chain Logistics</span>
+                        <h3>Supply Chain Dashboard</h3>
+                        <p>Logistics efficiency modeling tracking shipping delays and operational inventory costs.</p>
+                        <div class="project-tech-icons">
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">Logistics</span>
+                            <span class="tech-tag">Excel</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8 Violence Against Women -->
+                <div class="project-card glass-card tilt-card" data-category="powerbi" 
+                     onclick="openModal(
+                        'Violence Against Women Analysis',
+                        'This high-impact dashboard raises awareness of key patterns, regional risk indicators, and temporal trends in violence statistics. Empowered with interactive geographic mapping and category sliders, it provides a clean, visual representation of social datasets to help researchers understand risks and hotbeds.',
+                        'Power BI, Social Impact Data, Data Visualization',
+                        'https://github.com/areesha797/Breaking-the-Silence-Violence-Against-Women'
+                     )">
+                    <div class="project-img-container">
+                        <img src="images/violence.png" alt="Violence Analysis Preview" loading="lazy">
+                        <div class="project-overlay">
+                            <span class="btn-view-project"><i class="fas fa-search-plus"></i> View Case Study</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-badge">Social Impact Data</span>
+                        <h3>Breaking The Silence Analysis</h3>
+                        <p>Geographic mapping and demographic indicators visualizing critical socio-regional datasets.</p>
+                        <div class="project-tech-icons">
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">Mapping</span>
+                            <span class="tech-tag">Data Stories</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9 AI Skills -->
+                <div class="project-card glass-card tilt-card" data-category="powerbi" 
+                     onclick="openModal(
+                        'AI Skills vs Job Risk',
+                        'A futuristic predictive index dashboard plotting automation scores across industries, aligning job roles against specific AI technical demands, and showing high-risk vs safe careers in upcoming decades.',
+                        'Power BI, Predictive Modeling, Advanced DAX',
+                        'https://github.com/areesha797/AI-Skills-VS-Job-Risk-Dashboard'
+                     )">
+                    <div class="project-img-container">
+                        <img src="images/01.png" alt="AI vs Job Risk Preview" loading="lazy">
+                        <div class="project-overlay">
+                            <span class="btn-view-project"><i class="fas fa-search-plus"></i> View Case Study</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-badge">Predictive Analytics</span>
+                        <h3>AI Skills vs Job Risk</h3>
+                        <p>Interactive index analyzing technical market shifts and automation exposure indices.</p>
+                        <div class="project-tech-icons">
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">Automation Index</span>
+                            <span class="tech-tag">DAX</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10 Food Delivery -->
+                <div class="project-card glass-card tilt-card" data-category="powerbi" 
+                     onclick="openModal(
+                        'Food Delivery Operations Dashboard',
+                        'An executive-level operational Power BI dashboard analyzing food delivery transaction metrics. It maps delivery time trends, fleet efficiencies, order cancellation ratios, customer satisfaction scores, and revenue margins by zone, enabling logistics managers to optimize dispatch strategies.',
+                        'Power BI, DAX, Power Query, Excel',
+                        'https://github.com/areesha797/'
+                     )">
+                    <div class="project-img-container">
+                        <img src="images/f01.png" alt="Food Delivery Dashboard Preview" loading="lazy">
+                        <div class="project-overlay">
+                            <span class="btn-view-project"><i class="fas fa-search-plus"></i> View Case Study</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-badge">Power BI + Operations</span>
+                        <h3>Food Delivery Dashboard</h3>
+                        <p>Analyzing dispatch times, cancellations, regional revenue, and fleet efficiency.</p>
+                        <div class="project-tech-icons">
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">DAX</span>
+                            <span class="tech-tag">Power Query</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 11 Store Sales Excel -->
+                <div class="project-card glass-card tilt-card" data-category="powerbi" 
+                     onclick="openModal(
+                        'Store Sales Excel Dashboard',
+                        'A high-fidelity business intelligence dashboard engineered entirely in Excel. Utilizing pivot tables, dynamic slicers, advanced nested formulas, and custom conditional formatting to track regional store revenues, profit metrics, and seasonal customer spending cycles.',
+                        'Excel, Pivot Tables, Formulas, Data Formatting',
+                        'https://github.com/areesha797/'
+                     )">
+                    <div class="project-img-container">
+                        <img src="images/store-sales.png" alt="Store Sales Excel Dashboard Preview" loading="lazy">
+                        <div class="project-overlay">
+                            <span class="btn-view-project"><i class="fas fa-search-plus"></i> View Case Study</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-badge">Excel BI Dashboard</span>
+                        <h3>Store Sales Excel Dashboard</h3>
+                        <p>Interactive pivot spreadsheet tracking retail sales, profit margins, and dynamic categories.</p>
+                        <div class="project-tech-icons">
+                            <span class="tech-tag">Excel</span>
+                            <span class="tech-tag">Pivot Tables</span>
+                            <span class="tech-tag">Spreadsheets</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="skills-section scroll-reveal" data-origin="bottom">
+        <div class="section-container">
+            <h2 class="section-title text-center"><span class="number-tag">05.</span> Technical & Soft Skills</h2>
+            
+            <div class="skills-box-layout">
+                <!-- Left: Technical Skills -->
+                <div class="skills-category-wrapper">
+                    <h3><i class="fas fa-code-branch"></i> Technical Skills</h3>
+                    <div class="technical-skills-grid">
+                        
+                        <div class="glass-card skill-card-modern tilt-card">
+                            <div class="skill-card-header">
+                                <i class="fas fa-database"></i>
+                                <h4>Databases</h4>
+                            </div>
+                            <ul class="skill-card-list">
+                                <li>MySQL</li>
+                                <li>PostgreSQL</li>
+                                <li>Data Normalization</li>
+                                <li>Query Optimization</li>
+                            </ul>
+                        </div>
+
+                        <div class="glass-card skill-card-modern tilt-card">
+                            <div class="skill-card-header">
+                                <i class="fab fa-python"></i>
+                                <h4>Programming</h4>
+                            </div>
+                            <ul class="skill-card-list">
+                                <li>Python Core</li>
+                                <li>Pandas & NumPy</li>
+                                <li>Matplotlib & Seaborn</li>
+                                <li>Scikit-learn</li>
+                            </ul>
+                        </div>
+
+                        <div class="glass-card skill-card-modern tilt-card">
+                            <div class="skill-card-header">
+                                <i class="fas fa-chart-line"></i>
+                                <h4>Data Visualization</h4>
+                            </div>
+                            <ul class="skill-card-list">
+                                <li>Power BI Dashboards</li>
+                                <li>DAX Programming</li>
+                                <li>Power Query & M</li>
+                                <li>Excel (Advanced Spreadsheets)</li>
+                            </ul>
+                        </div>
+
+                        <div class="glass-card skill-card-modern tilt-card">
+                            <div class="skill-card-header">
+                                <i class="fas fa-toolbox"></i>
+                                <h4>Tools & ETL</h4>
+                            </div>
+                            <ul class="skill-card-list">
+                                <li>Data Wrangling</li>
+                                <li>Pivot Tables & Charts</li>
+                                <li>Data Cleaning / ETL</li>
+                                <li>Statistical Modeling</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Right: Soft Skills -->
+                <div class="skills-category-wrapper">
+                    <h3><i class="fas fa-users-cog"></i> Professional Capabilities</h3>
+                    <div class="soft-skills-grid">
+                        <div class="glass-card soft-card tilt-card">
+                            <i class="fas fa-comments text-cyan"></i>
+                            <span>Communication & Presentation</span>
+                        </div>
+                        <div class="glass-card soft-card tilt-card">
+                            <i class="fas fa-lightbulb text-purple"></i>
+                            <span>Problem Solving & Analytics</span>
+                        </div>
+                        <div class="glass-card soft-card tilt-card">
+                            <i class="fas fa-brain text-teal"></i>
+                            <span>Critical Thinking</span>
+                        </div>
+                        <div class="glass-card soft-card tilt-card">
+                            <i class="fas fa-search-plus text-pink"></i>
+                            <span>Attention to Detail</span>
+                        </div>
+                        <div class="glass-card soft-card tilt-card">
+                            <i class="fas fa-users text-cyan"></i>
+                            <span>Team Collaboration</span>
+                        </div>
+                        <div class="glass-card soft-card tilt-card">
+                            <i class="fas fa-clock text-purple"></i>
+                            <span>Time Management</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="certifications-section scroll-reveal" data-origin="bottom">
+        <div class="section-container">
+            <h2 class="section-title text-center"><span class="number-tag">06.</span> Certifications</h2>
+            <div class="cert-grid">
+                <!-- Cert 1: Power BI Project Challenge -->
+                <div class="glass-card cert-card tilt-card">
+                    <div class="cert-image-frame">
+                        <img src="images/areesha naeem.jpg" alt="Power BI Project Challenge Certification" loading="lazy">
+                        <div class="cert-glass-overlay">
+                            <a href="images/areesha naeem.jpg" target="_blank" class="btn-cert-zoom"><i class="fas fa-expand-alt"></i> View Full Credential</a>
+                        </div>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Power BI Project Challenge</h3>
+                        <p class="cert-desc">
+                            Successfully completed a rigorous hands-on enterprise-level dashboard design challenge, auditing and resolving real-world dataset inconsistencies, performance bottlenecks, and business visualizations.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Cert 2: Data Analysis with Python -->
+                <div class="glass-card cert-card tilt-card">
+                    <div class="cert-image-frame">
+                        <img src="images/certificate-02.png" alt="Data Analysis with Python DA0101EN Certification" loading="lazy">
+                        <div class="cert-glass-overlay">
+                            <a href="images/certificate-02.png" target="_blank" class="btn-cert-zoom"><i class="fas fa-expand-alt"></i> View Full Credential</a>
+                        </div>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Data Analysis with Python (DA0101EN)</h3>
+                        <p class="cert-desc">
+                            Certified by IBM for mastering data analysis techniques with Python, including data cleaning, loading and prepping tables, exploratory analysis (EDA), statistical correlations, and building regression models.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Cert 3: Power BI Challenge - Top Performer -->
+                <div class="glass-card cert-card tilt-card">
+                    <div class="cert-image-frame">
+                        <img src="images/databuzz performer.png" alt="Power BI Challenge Top Performer Certification" loading="lazy">
+                        <div class="cert-glass-overlay">
+                            <a href="images/databuzz performer.png" target="_blank" class="btn-cert-zoom"><i class="fas fa-expand-alt"></i> View Full Credential</a>
+                        </div>
+                    </div>
+                    <div class="cert-info">
+                        <h3>Power BI Challenge — Top Performer</h3>
+                        <p class="cert-desc">
+                            Recognized as an exceptional Top Performer in dynamic dashboard building challenges, demonstrating advanced data modeling, data visualization design systems, and fast insight delivery.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT ME SECTION -->
+    <section id="contact" class="contact-section scroll-reveal" data-origin="bottom">
+        <div class="section-container text-center">
+            <h2 class="section-title"><span class="number-tag">07.</span> Get In Touch</h2>
+            <p class="contact-lead">
+                I am currently looking for remote or hybrid **Data Analyst** opportunities! Whether you have an interesting business project, are seeking data insight pipelines, or just want to connect, my inbox is always open.
+            </p>
+            
+            <div class="contact-card-wrapper">
+                <div class="glass-card contact-glass-card">
+                    <h3>Let's build something insightful together!</h3>
+                    
+                    <div class="contact-details">
+                        <a href="mailto:areesha.naeem122@gmail.com?subject=Portfolio%20Contact" class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <span class="label">Direct Email</span>
+                                <span class="value">areesha.naeem122@gmail.com</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.linkedin.com/in/areeshanaeem" target="_blank" class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <div>
+                                <span class="label">LinkedIn Professional Network</span>
+                                <span class="value">linkedin.com/in/areeshanaeem</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="btn-group-contact">
+                        <a href="mailto:areesha.naeem122@gmail.com?subject=Portfolio%20Contact" class="btn-primary"><i class="fas fa-envelope-open-text"></i> Send an Email</a>
+                        <a href="https://www.linkedin.com/in/areeshanaeem" target="_blank" class="btn-secondary"><i class="fab fa-linkedin-in"></i> Message on LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="glass-footer">
+        <div class="footer-container">
+            <p class="footer-copy">
+                &copy; 2026 Areesha Naeem. All Rights Reserved.
+            </p>
+            <p class="footer-designed">
+                Designed & Engineered with <i class="fas fa-heart text-pink"></i> for ultimate data aesthetics.
+            </p>
+        </div>
+    </footer>
+
+    <!-- MODAL (CASE STUDY VIEW) -->
+    <div id="modal" class="modal" aria-hidden="true" role="dialog">
+        <div class="modal-content glass-card animate-modal">
+            <button class="modal-close" onclick="closeModal()" aria-label="Close modal">&times;</button>
+            
+            <div class="modal-header">
+                <span class="modal-accent-tag"><i class="fas fa-chart-line"></i> CASE STUDY SUMMARY</span>
+                <h2 id="m-title">Project Title</h2>
+            </div>
+            
+            <div class="modal-body-scroll">
+                <div class="modal-section">
+                    <h3><i class="fas fa-info-circle text-cyan"></i> Problem & Project Summary</h3>
+                    <p id="m-desc">Detailed descriptions of what this project focuses on and the insights delivered.</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3><i class="fas fa-tools text-purple"></i> Technologies & Analytics Utilized</h3>
+                    <div class="modal-tech-box" id="m-tools">
+                        Power BI, SQL, DAX, Excel
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3><i class="fas fa-external-link-alt text-teal"></i> Code & Deliverables</h3>
+                    <p>Review the complete repository files, dashboard configurations, and queries on GitHub:</p>
+                    <a id="m-link" href="#" target="_blank" class="btn-primary btn-modal-link"><i class="fab fa-github"></i> Open GitHub Repository</a>
+                </div>
+            </div>
+            
+            <div class="modal-footer">
+                <button class="btn-secondary" onclick="closeModal()">Close Case Study</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+
+</body>
+</html>
