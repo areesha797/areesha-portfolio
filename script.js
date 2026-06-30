@@ -144,9 +144,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // ================= HERO HEADER TYPING EFFECT =================
     const textArray = [
         "Data Analyst",
-        "Power BI Developer",
-        "SQL Query Specialist",
-        "Python EDA Modeler"
+        "Python Developer",
+        "Power BI developer",
+        "Machine Learning Engineer"
     ];
     
     let index = 0;
