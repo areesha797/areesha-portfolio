@@ -1703,3 +1703,9 @@ section {
         font-size: 1.4rem;
     }
 }
+
+.tech-ml {
+    position: absolute;
+    bottom: 5%;
+    left: -35px;
+}
