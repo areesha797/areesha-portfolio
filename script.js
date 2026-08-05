@@ -211,47 +211,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // ================= HERO TEXT TYPING EFFECT =================
-    const wordsList = [
-        "Frontend Features",
-        "Interactive Dashboards",
-        
-        
-    ];
-    let wordIdx = 0;
-    let charIdx = 0;
-    let currentWord = "";
-    let isDeleting = false;
-    const typingSpan = document.getElementById("typing");
     
-    function typeSequence() {
-        if (!typingSpan) return;
-        
-        const fullWord = wordsList[wordIdx];
-        if (isDeleting) {
-            currentWord = fullWord.substring(0, charIdx--);
-        } else {
-            currentWord = fullWord.substring(0, charIdx++);
-        }
-        
-        typingSpan.textContent = currentWord;
-        let speed = isDeleting ? 40 : 80;
-        
-        if (!isDeleting && charIdx === fullWord.length + 1) {
-            isDeleting = true;
-            speed = 1800; // Pause at typed word
-        } else if (isDeleting && charIdx === 0) {
-            isDeleting = false;
-            wordIdx = (wordIdx + 1) % wordsList.length;
-            speed = 300; // Brief pause before starting next word
-        }
-        
-        setTimeout(typeSequence, speed);
-    }
-    
-    if (typingSpan) {
-        typeSequence();
-    }
 
     // ================= MACOS TERMINAL TABS TOGGLE =================
     const termTabs = document.querySelectorAll(".term-tab");
