@@ -994,6 +994,130 @@ DIVIDE(
     CALCULATE(COUNT('DeliveryFact'[OrderID]), 'DeliveryFact'[DeliveryTimeDiff] > 0), 
     COUNT('DeliveryFact'[OrderID])
 )`
+        },
+                mkea: {
+            title: "MKEA-Lite — Multilingual Audio Archive Knowledge System",
+            desc: "A research-oriented AI system that transforms multilingual audio recordings into searchable and structured knowledge. The system uses Whisper-based speech recognition and automatic language detection, multilingual semantic embeddings with FAISS for natural-language retrieval, named-entity extraction, and NetworkX knowledge graphs to connect recordings, transcript segments, and entities.",
+            impact: "Built an end-to-end research prototype that turns unstructured multilingual audio into searchable knowledge, combining speech recognition, semantic retrieval, entity extraction, and relationship modeling in a single interactive application.",
+            tools: "Python, OpenAI Whisper, Sentence Transformers, FAISS, spaCy, NetworkX, Streamlit",
+            code: `# Multilingual audio processing pipeline
+import whisper
+from sentence_transformers import SentenceTransformer
+import faiss
+
+# Transcribe uploaded audio
+model = whisper.load_model("tiny")
+result = model.transcribe(audio_path)
+
+# Generate semantic embeddings
+embedder = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2")
+embeddings = embedder.encode(transcript_segments)
+
+# Build FAISS semantic search index
+index = faiss.IndexFlatL2(embeddings.shape[1])
+index.add(embeddings)
+
+# Search transcript knowledge using semantic similarity
+distances, indices = index.search(query_embedding, k=5)`,
+            kpis: [
+                "Whisper-based multilingual speech recognition",
+                "FAISS-powered semantic search across transcript segments",
+                "Named-entity extraction and knowledge-graph relationships"
+            ],
+            dax: `// Knowledge retrieval workflow
+Audio
+  → Speech Recognition
+  → Language Detection
+  → Transcript Segmentation
+  → Multilingual Embeddings
+  → FAISS Semantic Search
+  → Entity Extraction
+  → Knowledge Graph`
+        },
+
+        assistiveObjectDetection: {
+            title: "Assistive Object Detection System",
+            desc: "An AI-powered computer vision application designed to provide accessible scene understanding. The system uses YOLO object detection and OpenCV-based image processing to identify objects and estimate their relative position, then presents the detected scene through an interactive Streamlit interface with browser-based speech output.",
+            impact: "Created a practical computer vision prototype that combines real-time object detection with accessible spoken scene descriptions, demonstrating how AI can translate visual information into actionable audio feedback.",
+            tools: "Python, Ultralytics YOLO, OpenCV, Streamlit, Pillow, Browser Speech Synthesis",
+            code: `# Object detection pipeline
+from ultralytics import YOLO
+import cv2
+
+# Load trained YOLO model
+model = YOLO("yolo11n.pt")
+
+# Read image frame
+frame = cv2.imread(image_path)
+
+# Detect objects
+results = model(frame)
+
+for result in results:
+    for box in result.boxes:
+        confidence = float(box.conf[0])
+        class_id = int(box.cls[0])
+        label = model.names[class_id]
+
+        # Determine object position
+        x_center = (box.xyxy[0][0] + box.xyxy[0][2]) / 2
+
+        if x_center < frame.shape[1] / 3:
+            position = "left"
+        elif x_center > frame.shape[1] * 2 / 3:
+            position = "right"
+        else:
+            position = "center"`,
+            kpis: [
+                "Real-time YOLO-based object detection",
+                "Relative left, center, and right object positioning",
+                "Accessible browser-based spoken scene descriptions"
+            ],
+            dax: `// Accessible scene interpretation
+Camera / Image
+  → YOLO Object Detection
+  → Bounding Boxes
+  → Object Classification
+  → Relative Position Estimation
+  → Scene Description
+  → Speech Output`
+        },
+
+        aiCourseRegistration: {
+            title: "AI Course Registration System",
+            desc: "A full-stack academic course registration concept combining a modern React interface with Python-based machine learning and SQL data processing. The system is designed around course selection and student information to support an intelligent and data-driven registration workflow.",
+            impact: "Combined frontend development, backend logic, machine learning, and relational data handling into a single academic software project, demonstrating full-stack development beyond dashboard-based applications.",
+            tools: "React, Python, Machine Learning, SQL, REST APIs",
+            code: `# Example recommendation workflow
+student_profile = {
+    "completed_courses": completed_courses,
+    "interests": student_interests,
+    "academic_level": academic_level
+}
+
+# Generate course features
+course_features = build_course_features(courses)
+
+# Calculate recommendation scores
+recommendations = recommendation_model.predict(
+    student_profile,
+    course_features
+)
+
+# Return ranked courses
+ranked_courses = sort_by_score(recommendations)`,
+            kpis: [
+                "React-based interactive course selection interface",
+                "Python machine-learning recommendation workflow",
+                "SQL-backed academic data processing"
+            ],
+            dax: `// Full-stack application flow
+React Frontend
+  → REST API
+  → Python Backend
+  → ML Recommendation Logic
+  → SQL Database
+  → Ranked Course Results`
         }
     };
     
